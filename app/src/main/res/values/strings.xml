@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Inventory Management</string>
+    <string name="login_page">Login Page</string>
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="Dont_have_an_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="invalid_user_pass">Invalid Username or Password!</string>
+    <string name="register">Register</string>
+    <string name="input_user_pass">Please Input a Username and Password</string>
+
 </resources>

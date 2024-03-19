@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class register_page extends AppCompatActivity {
+    Button backbutton;
     Login login = new Login();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class register_page extends AppCompatActivity {
         EditText username = findViewById(R.id.editTextTextPersonName);
         EditText password = findViewById(R.id.editTextTextPassword);
 
+
         registerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -36,6 +39,5 @@ public class register_page extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
