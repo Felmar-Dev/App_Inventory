@@ -1,77 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient2"
-    app:layout_anchorGravity="center"
     tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="315dp"
         android:layout_height="531dp"
         android:background="@drawable/outline_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501">
-
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/outline_bg"
-            android:drawableStart="@drawable/ic_user"
-            android:ems="10"
-            android:hint="@string/username"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textAlignment="viewStart"
-            android:textColor="@color/c5"
-            android:textColorHint="@color/c5"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <EditText
-            android:id="@+id/editTextTextPassword"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            android:background="@drawable/outline_bg"
-            android:drawableStart="@drawable/ic_lock"
-            android:ems="10"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textAlignment="viewStart"
-            android:textColor="@color/c5"
-            android:textColorHint="@color/c5"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/outline_bg"
-            android:text="@string/login"
-            android:textColor="@color/c5"
-            app:backgroundTint="@null"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        android:layout_centerInParent="true">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/login_page_title"
+            android:layout_marginTop="68dp"
             android:layout_width="182dp"
             android:layout_height="56dp"
             android:text="@string/login_page"
@@ -79,39 +23,82 @@
             android:textColor="@color/c5"
             android:textSize="34sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.17" />
+            android:layout_centerHorizontal="true"/>
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="161dp"
-            android:layout_height="23dp"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/outline_bg"
-            android:text="@string/Dont_have_an_account"
-            android:textAlignment="center"
-            android:textColor="#0D786E"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
-
-        <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/invalid_user_pass"
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@string/invalid_user_pass"
             android:textColor="#B71C1C"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_below="@id/login_page_title"
+            android:layout_centerHorizontal="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/edit_text_username"
+            android:layout_marginTop="6dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/outline_bg"
+            android:drawableStart="@drawable/ic_user"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/c5"
+            android:textColorHint="@color/c5"
+            android:layout_below="@id/invalid_user_pass"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_marginTop="16dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/outline_bg"
+            android:drawableStart="@drawable/ic_lock"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/c5"
+            android:textColorHint="@color/c5"
+            android:layout_below="@id/edit_text_username"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_marginTop="32dp"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_login_register_bg"
+            android:text="@string/login"
+            android:textColor="@color/c2"
+            app:backgroundTint="@null"
+            app:cornerRadius="10dp"
+            android:layout_below="@id/edit_text_password"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/button_register"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/button_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/button_login_register_bg"
+            android:contentDescription="@string/dont_have_an_account"
+            android:text="@string/dont_have_an_account"
+            android:textAlignment="center"
+            android:textColor="@color/c2"
+            android:textSize="12sp"
+            app:backgroundTint="@null" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

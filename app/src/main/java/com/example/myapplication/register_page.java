@@ -14,18 +14,17 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class register_page extends AppCompatActivity {
-    Button backbutton;
     Login login = new Login();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_page);
-        TextView errorText = findViewById(R.id.textView8);
+        TextView errorText = findViewById(R.id.invalid_user_pass);
         errorText.setVisibility(View.INVISIBLE);
-        Button registerButton = findViewById(R.id.button);
-        EditText username = findViewById(R.id.editTextTextPersonName);
-        EditText password = findViewById(R.id.editTextTextPassword);
+        Button registerButton = findViewById(R.id.button_register);
+        EditText username = findViewById(R.id.edit_text_username);
+        EditText password = findViewById(R.id.edit_text_password);
 
 
         registerButton.setOnClickListener(new View.OnClickListener(){

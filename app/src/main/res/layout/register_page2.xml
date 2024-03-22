@@ -92,7 +92,7 @@
             android:layout_height="23dp"
             android:layout_marginTop="48dp"
             android:background="@drawable/outline_bg"
-            android:text="@string/Dont_have_an_account"
+            android:text="@string/dont_have_an_account"
             android:textAlignment="center"
             android:textColor="#0D786E"
             android:textStyle="italic"

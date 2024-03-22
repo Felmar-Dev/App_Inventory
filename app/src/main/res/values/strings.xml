@@ -4,7 +4,8 @@
     <string name="create_account">Create Account</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="Dont_have_an_account">Don\'t have an account?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="alredy_have_an_account">Already have an account?</string>
     <string name="login">Login</string>
     <string name="invalid_user_pass">Invalid Username or Password!</string>
     <string name="register">Register</string>

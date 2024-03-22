@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inventory.addItem("Banana", "Healthy Fruit", 5, 10.00);
-        Button loginButton = findViewById(R.id.button);
-        EditText username = findViewById(R.id.editTextTextPersonName);
-        EditText password = findViewById(R.id.editTextTextPassword);
-        TextView registerButton = findViewById(R.id.textView4);
-        TextView errorText = findViewById(R.id.textView6);
+        Button loginButton = findViewById(R.id.button_login);
+        EditText username = findViewById(R.id.edit_text_username);
+        EditText password = findViewById(R.id.edit_text_password);
+        Button registerButton = findViewById(R.id.button_register);
+        TextView errorText = findViewById(R.id.invalid_user_pass);
 
         errorText.setVisibility(View.INVISIBLE);
         Intent i = new Intent(this, register_page.class);
